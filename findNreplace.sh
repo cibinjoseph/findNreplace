@@ -27,11 +27,12 @@ do
       # Overwrite 
       mv dummyfile "$filename"
       echo REPLACE SUCCESS in "$filename"
-
-      # Remove grepResult files
-      rm -f grepResult?
     fi
-  else
-    echo "No instances found of $1 in $filename"
+
+    # else # IGNORE
+    # echo "No instances found of $1 in $filename"
   fi
 done
+
+# Remove grepResult files
+rm -f grepResult?
