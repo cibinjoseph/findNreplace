@@ -22,7 +22,7 @@ do
     # Replace if line numbers match
     if [ "${ndiffs}" -ne 0 ]; then
       echo REPLACE FAILED "${ndiffs}" times in "$filename" in lines:
-      diff -o grepResult1 grepResult2
+      diff -U 0 grepResult1 grepResult2
     else
       # Overwrite 
       mv dummyfile "$filename"
